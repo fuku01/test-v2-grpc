@@ -1,8 +1,8 @@
-package handler
+package grpc
 
 import "github.com/fuku01/test-v2-api/pkg/grpc/pb"
 
-// 複数のHandlerを一つの構造体にまとめる（埋め込みフィールド）
+// 複数のHandlerを一つの構造体にまとめる（埋め込みフィールドにして、GRPCServiceServer構造体自体が全てのメソッドを持つようにする必要がある）
 type GRPCServiceServer struct {
 	TodoHandler
 }
