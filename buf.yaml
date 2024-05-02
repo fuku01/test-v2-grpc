@@ -1,0 +1,10 @@
+version: v1
+
+deps:
+  - buf.build/envoyproxy/protoc-gen-validate # protoc-gen-validateを使用するための設定（https://github.com/bufbuild/protoc-gen-validate?tab=readme-ov-file#examples）
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT

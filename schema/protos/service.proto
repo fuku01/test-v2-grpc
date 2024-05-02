@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package v2;
+
+option go_package = "pkg/grpc/pb";
+
+import "google/protobuf/empty.proto";
+
+import "schema/protos/todo.proto";
+// 別のprotoをimportする時は、自動生成コマンドを実行するディレクトリからみたパスで指定する
+// https://buf.build/docs/cli/faqs#why-can't-buf-generate-find-a-file-in-my-import-statements?
+
+// サービスとドメインでパッケージ分ける場合などは、todo.TodoListのように指定する
+
+service GRPCService {
+  rpc GetTodoList(google.protobuf.Empty) returns (TodoList);
+}

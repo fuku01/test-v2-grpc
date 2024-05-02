@@ -1,0 +1,21 @@
+version: v1
+
+plugins:
+  - plugin: go
+    out: .
+    opt:
+      - paths=import
+  - plugin: go-grpc
+    out: .
+    opt:
+      - paths=import
+      - require_unimplemented_servers=false
+
+  # protoc-gen-validateを使用するための設定（https://github.com/bufbuild/protoc-gen-validate?tab=readme-ov-file#examples）
+  - plugin: buf.build/bufbuild/validate-go
+    out: .
+    opt:
+      - paths=import
+#
+# ! ファイル更新後に`buf mod update`を実行して、buf.lockを更新する必要がある
+#

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package v2;
+
+option go_package = "pkg/grpc/pb";
+
+import "google/protobuf/empty.proto";
+import "validate/validate.proto";
+import "google/protobuf/timestamp.proto"; // timestamp型を使うために必要
+
+// TodoItemは一つのタスクを表します。
+message Todo {
+  uint64 id = 1;
+  // タスクの内容
+  string content = 2 [ (validate.rules).string.min_len = 1 ];
+  google.protobuf.Timestamp created_at = 3;
+  google.protobuf.Timestamp updated_at = 4;
+}
+
+message TodoList {
+  // TodoItemのリスト
+  repeated Todo todo_list = 1;
+}
