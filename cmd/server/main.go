@@ -7,11 +7,11 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/fuku01/test-v2-api/db/config"
-	"github.com/fuku01/test-v2-api/pkg/grpc/pb"
-	grpc_handler "github.com/fuku01/test-v2-api/pkg/handler/grpc"
-	repository "github.com/fuku01/test-v2-api/pkg/infrastructure/mysql"
-	"github.com/fuku01/test-v2-api/pkg/usecase"
+	"github.com/fuku01/test-v2-grpc/db/config"
+	"github.com/fuku01/test-v2-grpc/pkg/grpc/pb"
+	grpc_handler "github.com/fuku01/test-v2-grpc/pkg/handler/grpc"
+	repository "github.com/fuku01/test-v2-grpc/pkg/infrastructure/mysql"
+	"github.com/fuku01/test-v2-grpc/pkg/usecase"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

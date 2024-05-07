@@ -1,4 +1,4 @@
-module github.com/fuku01/test-v2-api
+module github.com/fuku01/test-v2-grpc
 
 go 1.21
 

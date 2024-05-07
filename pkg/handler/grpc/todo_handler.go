@@ -3,8 +3,8 @@ package grpc
 import (
 	"context"
 
-	"github.com/fuku01/test-v2-api/pkg/grpc/pb"
-	"github.com/fuku01/test-v2-api/pkg/usecase"
+	"github.com/fuku01/test-v2-grpc/pkg/grpc/pb"
+	"github.com/fuku01/test-v2-grpc/pkg/usecase"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 

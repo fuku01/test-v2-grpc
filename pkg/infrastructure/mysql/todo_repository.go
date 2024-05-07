@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/fuku01/test-v2-api/pkg/domain/entity"
-	"github.com/fuku01/test-v2-api/pkg/domain/repository"
+	"github.com/fuku01/test-v2-grpc/pkg/domain/entity"
+	"github.com/fuku01/test-v2-grpc/pkg/domain/repository"
 	"gorm.io/gorm"
 )
 
